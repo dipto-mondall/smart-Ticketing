@@ -84,7 +84,7 @@
       </nav>
 
       <!-- banner -->
-      <section class="mt-9 mb-[100px]">
+      <section class="mt-9 mb-[120px]">
         <div
           class="hero min-h-screen rounded-3xl"
           style="background-image: url(./images/banner.png)"
@@ -107,7 +107,7 @@
                 class="rounded-xl bg-[#1DD100] border-0 font-bold text-[#030712] text-xl px-7 py-4"
                 id="buy-ticket"
               >
-                <a href="">Buy Tickets</a>
+                <a href="#ph-section">Buy Tickets</a>
               </button>
             </div>
           </div>
@@ -162,37 +162,161 @@
       </section>
     </header>
     <main>
+      <!-- offer section -->
       <section id="offer-section" class="container mx-auto text-center">
         <h2 class="raleway font-bold text-[40px]">Best offers for you</h2>
         <div class="flex flex-col w-full lg:flex-row gap-6 md:mt-12 md:mb-16">
-          <div
-            class=" flex-grow card  rounded-box  bg-[#FFBF0F]"
-          >
-        <div class="flex justify-around items-center p-12">
-          <!-- left -->
-          <div>
-            <h2>15% OFF</h2>
-            <p>on your next purchase</p>
-            <p>use by January 2024</p>
+          <div class="flex-grow card rounded-box bg-[#FFBF0F]">
+            <div class="flex justify-around items-center inter">
+              <!-- left -->
+              <div>
+                <h2 class="text-[40px] font-extrabold text-[#030712CC]">
+                  15% OFF
+                </h2>
+                <p class="font-semibold text-xl text-[#030712CC] my-2">
+                  on your next purchase
+                </p>
+                <p class="text-[18px] font-medium text-[#03071280]">
+                  use by January 2024
+                </p>
+              </div>
+              <div><img src="./images/cupon-devider.png" alt="" /></div>
+              <!-- right -->
+              <div class="raleway">
+                <h2 class="text-[#030712] font-bold text-[32px]">
+                  <span id="new-15">NEW15</span>
+                </h2>
+                <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+              </div>
+            </div>
           </div>
-          <!-- right -->
-          <div>
-            <h2>NEW15</h2>
-            <p>Coupon Code</p>
-          </div>
-        </div>
-        </div>
 
-          <div
-            class=" flex-grow  card bg-base-300 rounded-box  bg-[#F78C9C] p-12"
-          >
-            content
+          <div class="flex-grow card rounded-box bg-[#F78C9C]">
+            <div class="flex justify-around items-center inter">
+              <!-- left -->
+              <div>
+                <h2 class="text-[40px] font-extrabold text-[#030712CC]">
+                  20% OFF
+                </h2>
+                <p class="font-semibold text-xl text-[#030712CC] my-2">
+                  on your next purchase
+                </p>
+                <p class="text-[18px] font-medium text-[#03071280]">
+                  use by January 2024
+                </p>
+              </div>
+              <!-- middle -->
+              <div><img src="./images/cupon-devider.png" alt="" /></div>
+              <!-- right -->
+              <div class="raleway">
+                <h2 class="text-[#030712] font-bold text-[32px]">
+                  <span id="couple-20">Couple 20</span>
+                </h2>
+                <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="btn">See All Offers</button>
+        <button
+          class="border-2 hover:bg-gray-950 border-[#1DD100] text-[#1DD100] raleway text-[20px] font-bold py-5 px-8"
+        >
+          See All Offers
+        </button>
+      </section>
+
+      <!-- ph section -->
+      <section
+        id="ph-section"
+        class="bg-[#F7F8F8] my-[120px] rounded-t-[50px] border-t-2 border-[#1dd100]"
+      >
+        <section class="container mx-auto">
+          <!-- section heading -->
+          <div class="text-center pt-[120px] mb-11">
+            <h2 class="text-[#030712] raleway font-bold text-[40px] mb-6">
+              P.H Paribahan
+            </h2>
+            <p class="inter text-[#03071299] text-lg font-normal">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+          <!-- uppser side -->
+          <div class="flex flex-col lg:flex-row justify-between items-center bg-white">
+            <!-- left -->
+            <div class=" w-[60%] mt-4 ml-6">
+              <div
+                class="flex justify-between gap-10 items-center "
+              >
+                <div class="flex gap-4">
+                  <img src="./images/bus-logo.png" alt="" class="mr-3" />
+                  <div>
+                    <h2 class="text-[#030712] font-bold raleway text-3xl">
+                      Greenline Paribahan
+                    </h2>
+                    <p class="inter text-[#03071299] text-lg font-normal">
+                      Coach-009-WEB ! AC_Business
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-center items-center gap-3 bg-[#1DD10026] p-[14px] rounded-lg"
+                >
+                  <img src="./images/seat-green.png" alt="" />
+                  <p class="inter text-lg font-medium text-[#1DD100]">
+                    <span id="seat-left">8</span> Seats left
+                  </p>
+                </div>
+              </div>
+               <!-- left lower part -->
+            <div class="bg-[#F7F8F8] m-[32px] p-4 rounded-md">
+              <div class="flex justify-between border-dotted border-b-2 mb-6">
+                <h2 class="text-[#03071299] raleway font-semibold text-lg">Route</h2>
+                <h2 class="text-[#030712] raleway font-semibold text-lg" >Dhaka - Sylhet</h2>
+              </div>
+              <div class="flex justify-between border-dotted border-b-2 mb-6">
+                <h2 class="text-[#03071299] raleway font-semibold text-lg">Departure Time</h2>
+                <h2 class="text-[#030712] raleway font-semibold text-lg" >9:00 PM</h2>
+              </div>
+              <div class="grid grid-cols-3 gap-6">
+                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
+                  <p>Boarding Point - Laxmipur</p>
+                </div>
+                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
+                  <p>Dropping Point - Bogura</p>
+                </div >
+                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
+                  <p>Est. Time - 11 Hour</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+           
+            <!-- middle -->
+            <div class="w-[20%] flex justify-center  ">
+              <img class="max-h-fit" relative bottom-2" src="./images/info-devider.png" alt="" />
+            </div>
+            <!-- right -->
+            <div class="flex flex-col justify-center items-center w-[20%]">
+              <img class="w-[25%]" src="./images/fare.png" alt="" />
+              <div class="text-center">
+                <h2 class="raleway text-[#030712] text-[32px] font-bold">
+                  550 Taka
+                </h2>
+                <p class="raleway font-semibold text-2xl text-[#03071299]">
+                  Per Seat
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+        </section>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+
+    </footer>
     <script src="./script/index.js"></script>
   </body>
 </html>
