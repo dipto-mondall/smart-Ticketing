@@ -227,7 +227,7 @@
       <!-- ph section -->
       <section
         id="ph-section"
-        class="bg-[#F7F8F8] my-[120px] rounded-t-[50px] border-t-2 border-[#1dd100]"
+        class="bg-[#F7F8F8] my-[120px] rounded-t-[50px] pb-10 border-t-2 border-[#1dd100]"
       >
         <section class="container mx-auto">
           <!-- section heading -->
@@ -241,12 +241,12 @@
             </p>
           </div>
           <!-- uppser side -->
-          <div class="flex flex-col lg:flex-row justify-between items-center bg-white">
+          <div
+            class="flex flex-col lg:flex-row justify-between items-center bg-white"
+          >
             <!-- left -->
-            <div class=" w-[60%] mt-4 ml-6">
-              <div
-                class="flex justify-between gap-10 items-center "
-              >
+            <div class="w-[60%] mt-4 ml-6">
+              <div class="flex justify-between gap-10 items-center">
                 <div class="flex gap-4">
                   <img src="./images/bus-logo.png" alt="" class="mr-3" />
                   <div>
@@ -267,41 +267,55 @@
                   </p>
                 </div>
               </div>
-               <!-- left lower part -->
-            <div class="bg-[#F7F8F8] m-[32px] p-4 rounded-md">
-              <div class="flex justify-between border-dotted border-b-2 mb-6">
-                <h2 class="text-[#03071299] raleway font-semibold text-lg">Route</h2>
-                <h2 class="text-[#030712] raleway font-semibold text-lg" >Dhaka - Sylhet</h2>
-              </div>
-              <div class="flex justify-between border-dotted border-b-2 mb-6">
-                <h2 class="text-[#03071299] raleway font-semibold text-lg">Departure Time</h2>
-                <h2 class="text-[#030712] raleway font-semibold text-lg" >9:00 PM</h2>
-              </div>
-              <div class="grid grid-cols-3 gap-6">
-                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
-                  <p>Boarding Point - Laxmipur</p>
+              <!-- left lower part -->
+              <div class="bg-[#F7F8F8] m-[32px] p-4 rounded-md">
+                <div class="flex justify-between border-dotted border-b-2 mb-6">
+                  <h2 class="text-[#03071299] raleway font-semibold text-lg">
+                    Route
+                  </h2>
+                  <h2 class="text-[#030712] raleway font-semibold text-lg">
+                    Dhaka - Sylhet
+                  </h2>
                 </div>
-                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
-                  <p>Dropping Point - Bogura</p>
-                </div >
-                <div class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm">
-                  <p>Est. Time - 11 Hour</p>
+                <div class="flex justify-between border-dotted border-b-2 mb-6">
+                  <h2 class="text-[#03071299] raleway font-semibold text-lg">
+                    Departure Time
+                  </h2>
+                  <h2 class="text-[#030712] raleway font-semibold text-lg">
+                    9:00 PM
+                  </h2>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                  <div
+                    class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm"
+                  >
+                    <p>Boarding Point - Laxmipur</p>
+                  </div>
+                  <div
+                    class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm"
+                  >
+                    <p>Dropping Point - Bogura</p>
+                  </div>
+                  <div
+                    class="text-[#030712CC] bg-[#0307120D] p-[18px] inter text-base rounded-sm"
+                  >
+                    <p>Est. Time - 11 Hour</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            </div>
-           
             <!-- middle -->
-            <div class="w-[20%] flex justify-center  ">
-              <img class="max-h-fit" relative bottom-2" src="./images/info-devider.png" alt="" />
+            <div class="w-[20%] flex justify-center">
+              <img class="max-h-fit" relative bottom-2"
+              src="./images/info-devider.png" alt="" />
             </div>
             <!-- right -->
             <div class="flex flex-col justify-center items-center w-[20%]">
               <img class="w-[25%]" src="./images/fare.png" alt="" />
               <div class="text-center">
                 <h2 class="raleway text-[#030712] text-[32px] font-bold">
-                  550 Taka
+                  <span id="perseat">550</span> Taka
                 </h2>
                 <p class="raleway font-semibold text-2xl text-[#03071299]">
                   Per Seat
@@ -310,13 +324,150 @@
             </div>
           </div>
 
-          <!--  -->
+          <!-- seat part -->
+          <div class="bg-white mt-8 p-6 flex gap-5">
+            <!-- left column -->
+            <div class="flex-1">
+              <div class="border-dotted border-b-2 pb-4 mb-6 w-full">
+                <h2 class="font-semibold text-2xl text-[#030712]">
+                  Select Your Seat
+                </h2>
+              </div>
+              <div
+                class="border-dotted border-b-2 pb-4 mb-6 w-full flex justify-between items-center space-y-3"
+              >
+                <h2 class="font-semibold text-2xl text-[#030712] inline-block">
+                  <img
+                    class="inline-block mr-4 font-medium text-lg text-[#03071280] inter"
+                    src="./images/seat-gray.png"
+                    alt=""
+                  />
+                  Available
+                </h2>
+                <p
+                  class="inline-block font-medium text-lg text-[#1DD100] inter"
+                >
+                  <img
+                    class="inline-block mr-4"
+                    src="./images/seat-green-filled.png"
+                    alt=""
+                  />Selected
+                </p>
+              </div>
+              <!-- seats -->
+              <div class="flex justify-end mb-8">
+                <button
+                  class="bg-[#F7F8F8] p-4 rounded-lg px-10 py-4 flex justify-center items-center"
+                >
+                  <img src="./images/wheel.png" alt="" />
+                </button>
+              </div>
+              <div
+                class="grid grid-cols-2 md:grid-cols-5 inter text-lg font-medium text-[#03071280] text-center gap-8"
+              >
+                <button class="">A</button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  A1
+                </button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  A2
+                </button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  A3
+                </button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  A4
+                </button>
+                <button class="">B</button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  B1
+                </button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  B2
+                </button>
+                <button id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  B3
+                </button>
+                <button  id="" class="bg-[#F7F8F8] p-4 rounded-lg seats-btn">
+                  B4
+                </button>
+              </div>
+            </div>
+            <!-- middle -->
+            <div class="border-dotted border-l-2"></div>
+            <!-- right column -->
+            <div class="flex-1">
+              <div class="border-dotted border-b-2 pb-4 mb-6 w-full">
+                <h2 class="font-semibold text-2xl text-[#030712]">
+                  Select Your Seat
+                </h2>
+              </div>
+              <!-- dynamic div -->
+              <div class="bg-[#F7F8F8] p-7 rounded-md">
+                <div
+                  class=""
+                  
+                >
+                <div class="flex justify-between border-dotted border-b-2 pb-4">
+                  <p class="inter text-base font-medium text-[#030712]">
+                    Seat
+                    <span
+                      id="add-seat"
+                      class="bg-[#1DD100] text-white p-2 rounded-md"
+                      >0</span
+                    >
+                  </p>
+                  <p class="inter text-base font-medium text-[#030712]">
+                    Class
+                  </p>
+                  <p class="inter text-base font-medium text-[#030712]">
+                    Price
+                  </p>
+                </div>
+                <ul id="dynamic-append" class="inter text-[#03071299] text-base font-normal">
+
+                </ul>
+                
+                </div>
+                <div class="mt-5">
+                  <div class="flex justify-between items-center text-[#030712] text-base font-medium inter">
+                    <p>Total Price</p>
+                    <p>BDT <span id="total-price">0</span></p>
+                  </div>
+                  <label class="input py-8 flex items-center gap-2 mt-4">
+                    <input type="text" id="Coupon-input" class="grow"  placeholder="Have any copupon?" />
+                    <button class="btn bg-[#1DD100] text-white  inter text-base font-semibold py-3 px-5" id="Coupon-input-btn">Apply</button>
+                  </label>
+                  <!-- grand -->
+                  <div class="flex justify-between items-center text-[#030712] text-base font-medium inter mt-5">
+                    <p>Grand Total</p>
+                    <p>BDT <span id="grand-total">0</span></p>
+                  </div>
+               
+                </div>
+               
+                  
+              </div>
+                <!-- passnger input part -->
+                <div class="bg-white mt-6">
+                   <h3 class="text-base inter font-semibold mb-4">Passenger Name*</h3>
+                  <input type="text" id="name" placeholder="Enter your name" class="input input-bordered w-full  py-4 mb-4" />
+                <!-- 2 -->
+                <h3 class="text-base inter font-semibold mb-4">Phone Number*</h3>
+                  <input type="text" id="phone-num" placeholder="Enter your phone number" class="input input-bordered w-full  py-4 mb-4" />
+                <!-- 3 -->
+                <h3 class="text-base inter font-semibold mb-4">Email ID</h3>
+                  <input type="text" id="email" placeholder="Enter your email id" class="input input-bordered w-full  py-4" />
+                  <button id="next" class="text-white bg-[#1DD100] w-full mt-6 py-5 rounded-xl">
+                    Next
+                  </button>
+            </div>
+          </div>
+          <!-- seat end -->
         </section>
       </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="./script/index.js"></script>
   </body>
 </html>

@@ -7,3 +7,6 @@
 .inter{
     font-family: "Inter", sans-serif;
 }
+li:last-child{
+    border-bottom : 2px solid rgba(3, 7, 18, 0.2);
+}
