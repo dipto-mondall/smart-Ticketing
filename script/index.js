@@ -49,51 +49,50 @@ for (const btn of seatsbtn) {
         let totalConvertedPrice = parseInt(totalPrice) + parseInt(perSeat);
         setInnertext('total-price', totalConvertedPrice);
 
-      let grandTotal = totalConvertedPrice;
+        let grandTotal = totalConvertedPrice;
         setInnertext('grand-total', grandTotal);
 
 
-        // document.getElementById('Coupon-input-btn').addEventListener("click", function () {
+        document.getElementById('Coupon-input-btn').addEventListener("click", function () {
     
-        //     const finalGrandtotal = grandTotal;
-        //     console.log(finalGrandtotal)
-        //     const newDiscount = document.getElementById('new-15').innerText;
-        //     const coupleDiscounted = document.getElementById('couple-20').innerText;
-        //     const couponInput = document.getElementById('Coupon-input').value;
-        //     //    grand-total
-        //     const grandTotal2 = document.getElementById('grand-total').innerText;
+            const finalGrandtotal = grandTotal;
+            console.log(finalGrandtotal)
+            const newDiscount = document.getElementById('new-15').innerText;
+            const coupleDiscounted = document.getElementById('couple-20').innerText;
+            const couponInput = document.getElementById('Coupon-input').value;
+            //    grand-total
+            const grandTotal2 = document.getElementById('grand-total').innerText;
 
-        //     if (newDiscount === couponInput) {
-        //         let discount = finalGrandtotal * 15 / 100;
-        //         let afterDiscount = finalGrandtotal - discount;
+            if (newDiscount === couponInput) {
+                let discount = totalConvertedPrice * 0.15;
+                let afterDiscount = totalConvertedPrice - discount;
                 
-        //         console.log(discount);
+                console.log(discount);
 
-        //         setInnertext('grand-total', afterDiscount);
-        //         document.getElementById('discount-input-container').classList.add('hidden');
-        //     } else if (coupleDiscounted === couponInput) {
-        //         let discount = finalGrandtotal * 20 / 100;
-        //         let afterDiscount = finalGrandtotal - discount;
+                setInnertext('grand-total', afterDiscount);
+                document.getElementById('discount-input-container').classList.add('hidden');
+            } else if (coupleDiscounted === couponInput) {
+                let discount = totalConvertedPrice * 0.2;
+                let afterDiscount = totalConvertedPrice - discount;
 
-        //         setInnertext('grand-total', afterDiscount);
-        //         document.getElementById('discount-input-container').classList.add('hidden');
-        //     }
-
-        //     document.getElementById('Coupon-input').value = '';
-
-        // });
+                setInnertext('grand-total', afterDiscount);
+                document.getElementById('discount-input-container').classList.add('hidden');
+            }
 
 
-
-
+        });
 
         // console.log(typeof grandTotal);
 
         appendElement.appendChild(li);
-
+  
+        grandTotal(grandTotal);
 
     });
 }
+
+
+
 
 
 document.getElementById('next').addEventListener("click", function () {
