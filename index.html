@@ -325,7 +325,7 @@
           </div>
 
           <!-- seat part -->
-          <div class="bg-white mt-8 p-6 flex gap-5">
+          <div class="bg-white mt-8 p-6 flex flex-col lg:flex-row gap-5">
             <!-- left column -->
             <div class="flex-1">
               <div class="border-dotted border-b-2 pb-4 mb-6 w-full">
@@ -549,7 +549,7 @@
                   </div>
                   <label id="discount-input-container" class="input py-8 flex items-center gap-2 mt-4">
                     <input type="text" id="Coupon-input" class="grow"  placeholder="Have any copupon?" />
-                    <button class="btn bg-[#1DD100] text-white  inter text-base font-semibold py-3 px-5" id="Coupon-input-btn">Apply</button>
+                    <button  class="btn bg-[#1DD100] text-white  inter text-base font-semibold py-3 px-5" id="Coupon-input-btn">Apply</button>
                   </label>
                   <!-- grand -->
                   <div class="flex justify-between items-center text-[#030712] text-base font-medium inter mt-5">
@@ -571,9 +571,24 @@
                 <!-- 3 -->
                 <h3 class="text-base inter font-semibold mb-4">Email ID</h3>
                   <input type="text" required id="email" placeholder="Enter your email id" class="input input-bordered w-full pl-6 py-7" />
-                  <button id="next" class="text-white bg-[#1DD100] w-full mt-6 py-5 rounded-xl">
-                    Next
-                  </button>
+
+                  <!-- Open the modal using ID.showModal() method -->
+<button class="btn text-white bg-[#1DD100] w-full mt-6 py-5 rounded-xl" onclick="my_modal_5.showModal()"> Next</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle raleway">
+  <div class="modal-box flex flex-col justify-center items-center">
+    <img src="./images/success.png" alt="">
+    <h3 class="font-bold text-lg text-[#27AE60] mt-4">SUCCESS</h3>
+    <p class="py-4 text-[#4A4A4A] font-medium">Thank you for Booking Our Bus Seats. 
+      We are working hard to find the best service and deals for you.</p>
+      <p class="text-[#4A4A4A] font-medium ">Shortly you will find a confirmation in your email.</p>
+    <div class="modal-action flex justify-center items-center">
+      <form method="dialog" >
+        <!-- if there is a button in form, it will close the modal -->
+        <button id="next" class=" text-white bg-[#27AE60] rounded-xl raleway text-xl px-9 py-4">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
                   <div class="underline mt-6 text-[#03071299] inter text-base font-normal text-center">
                     <a href="#" class="mr-4">Terms and Conditions</a>
                     <a href="#">Cancellation Policy</a>

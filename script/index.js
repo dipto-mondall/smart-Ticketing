@@ -5,19 +5,19 @@ let count = 0;
 
 for (const btn of seatsbtn) {
     btn.addEventListener("click", function (e) {
-        btn.setAttribute( "disabled", true);
-        if (count === 4){
+        btn.setAttribute("disabled", true);
+        if (count === 4) {
             alert("Already you selected 4seats ticket!")
-            document.getElementsByClassName("seats-btn").setAttribute( "disabled", true);
-            
-            
+            document.getElementsByClassName("seats-btn").setAttribute("disabled", true);
+
+
         }
-    
-       // selected btn
-       btn.style.backgroundColor = '#1DD100';
-       
-       
-   
+
+        // selected btn
+        btn.style.backgroundColor = '#1DD100';
+
+
+
 
         // seats left
         const seatsLeft = document.getElementById('seat-left');
@@ -25,15 +25,15 @@ for (const btn of seatsbtn) {
         let covertedSeatsLeft = parseInt(seatsLeftNumber);
         setInnertext('seat-left', covertedSeatsLeft - 1);
 
-      
-        
+
+
         // id="add-seat"
         count = count + 1;
-        
+
         setInnertext('add-seat', count);
         // for (let count = 0; count <= 5; count++) {
         //     alert();
-            
+
 
         // }
 
@@ -49,44 +49,56 @@ for (const btn of seatsbtn) {
         let totalConvertedPrice = parseInt(totalPrice) + parseInt(perSeat);
         setInnertext('total-price', totalConvertedPrice);
 
+      let grandTotal = totalConvertedPrice;
+        setInnertext('grand-total', grandTotal);
 
 
-     
+        // document.getElementById('Coupon-input-btn').addEventListener("click", function () {
+    
+        //     const finalGrandtotal = grandTotal;
+        //     console.log(finalGrandtotal)
+        //     const newDiscount = document.getElementById('new-15').innerText;
+        //     const coupleDiscounted = document.getElementById('couple-20').innerText;
+        //     const couponInput = document.getElementById('Coupon-input').value;
+        //     //    grand-total
+        //     const grandTotal2 = document.getElementById('grand-total').innerText;
 
-        document.getElementById('Coupon-input-btn').addEventListener("click", function () {
-            const newDiscount = document.getElementById('new-15').innerText;
-            const coupleDiscounted = document.getElementById('couple-20').innerText;
-            const couponInput = document.getElementById('Coupon-input').value;
-            //    grand-total
-            const grandTotal = document.getElementById('grand-total').innerText;
+        //     if (newDiscount === couponInput) {
+        //         let discount = finalGrandtotal * 15 / 100;
+        //         let afterDiscount = finalGrandtotal - discount;
+                
+        //         console.log(discount);
 
-            if ( newDiscount  === couponInput ) {               
-                let discount = totalConvertedPrice * 15 / 100;
-                let afterDiscount = totalConvertedPrice - discount;
-                document.getElementById('discount-input-container').classList.add('hidden');
-                setInnertext('grand-total', afterDiscount);
-            } else if (coupleDiscounted === couponInput){
-                let discount = totalConvertedPrice * 20 / 100;
-                let afterDiscount = totalConvertedPrice - discount;
-                document.getElementById('discount-input-container').classList.add('hidden');
-                setInnertext('grand-total', afterDiscount);
-            }
-               
-            document.getElementById('Coupon-input').value = '';
-            
-        })
+        //         setInnertext('grand-total', afterDiscount);
+        //         document.getElementById('discount-input-container').classList.add('hidden');
+        //     } else if (coupleDiscounted === couponInput) {
+        //         let discount = finalGrandtotal * 20 / 100;
+        //         let afterDiscount = finalGrandtotal - discount;
 
-        setInnertext('grand-total', totalConvertedPrice);
+        //         setInnertext('grand-total', afterDiscount);
+        //         document.getElementById('discount-input-container').classList.add('hidden');
+        //     }
+
+        //     document.getElementById('Coupon-input').value = '';
+
+        // });
+
+
+
+
 
         // console.log(typeof grandTotal);
 
         appendElement.appendChild(li);
-        
-    
+
+
     });
 }
 
 
+document.getElementById('next').addEventListener("click", function () {
+    window.location.reload();
+})
 
 function setInnertext(id, value) {
     document.getElementById(id).innerText = value;
