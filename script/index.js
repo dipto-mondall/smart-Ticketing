@@ -2,28 +2,46 @@
 const seatsbtn = document.getElementsByClassName("seats-btn");
 let count = 0;
 
+
 for (const btn of seatsbtn) {
     btn.addEventListener("click", function (e) {
-        if (count < 4) {
-            alert;
+        btn.setAttribute( "disabled", true);
+        if (count === 4){
+            alert("Already you selected 4seats ticket!")
+            document.getElementsByClassName("seats-btn").setAttribute( "disabled", true);
+            
+            
         }
+    
+       // selected btn
+       btn.style.backgroundColor = '#1DD100';
+       
+       
+   
+
         // seats left
         const seatsLeft = document.getElementById('seat-left');
         const seatsLeftNumber = seatsLeft.innerText;
         let covertedSeatsLeft = parseInt(seatsLeftNumber);
         setInnertext('seat-left', covertedSeatsLeft - 1);
 
-        // selected btn
-        btn.style.backgroundColor = '#1DD100';
+      
+        
         // id="add-seat"
         count = count + 1;
+        
         setInnertext('add-seat', count);
+        // for (let count = 0; count <= 5; count++) {
+        //     alert();
+            
+
+        // }
 
         const perSeat = document.getElementById('perseat').innerText;
 
         const appendElement = document.getElementById('dynamic-append');
         const li = document.createElement('li');
-        li.classList.add('flex', 'justify-between')
+        li.classList.add('flex', 'justify-between');
         li.innerHTML = `<p>${btn.innerText}</p> <p>Economoy</p> <p>${perSeat}</p>`;
 
         // total-price
@@ -45,14 +63,16 @@ for (const btn of seatsbtn) {
             if ( newDiscount  === couponInput ) {               
                 let discount = totalConvertedPrice * 15 / 100;
                 let afterDiscount = totalConvertedPrice - discount;
+                document.getElementById('discount-input-container').classList.add('hidden');
                 setInnertext('grand-total', afterDiscount);
             } else if (coupleDiscounted === couponInput){
                 let discount = totalConvertedPrice * 20 / 100;
                 let afterDiscount = totalConvertedPrice - discount;
+                document.getElementById('discount-input-container').classList.add('hidden');
                 setInnertext('grand-total', afterDiscount);
             }
                
- 
+            document.getElementById('Coupon-input').value = '';
             
         })
 
@@ -61,7 +81,8 @@ for (const btn of seatsbtn) {
         // console.log(typeof grandTotal);
 
         appendElement.appendChild(li);
-
+        
+    
     });
 }
 
